@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   const [t, i18n] = useTranslation("common");
   const [currentYear, setCurrentYear] = useState<number | null>(null);
 
-  const socialItems = [
+  const socialItems: any[] = [
     {
       title: "Github",
       href: "https://github.com/konerbi",
@@ -31,10 +32,7 @@ const Footer = () => {
             return (
               <div key={"socialItem-" + index} className={`footer-icon-container`}>
                 <a className={`footer-icon`} href={value.href} title={value.title} target="_blank">
-                  <img
-                    className={value.icon}
-                    src={`src/assets/images/${value.icon}.svg`}
-                  ></img>
+                  <FontAwesomeIcon icon={["fab", value.icon]} />
                 </a>
               </div>
             );

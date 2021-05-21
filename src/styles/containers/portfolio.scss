@@ -1,0 +1,17 @@
+@import "../core";
+
+.portfolio-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: $color-font-primary;
+  padding-top: $top-navbar-height-desktop;
+  padding-bottom: $footer-height;
+  height: calc(
+    100vh - #{sum($top-navbar-height-desktop, $footer-height, 1rem)}
+  );
+  max-height: 100vh;
+  min-height: 15rem;
+}

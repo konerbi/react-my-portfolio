@@ -6,7 +6,7 @@ import {useTranslation} from "react-i18next";
 const Navbar = () => {
 	const location = useLocation();
 	const [t, i18n] = useTranslation('common');
-	const [isSticky, setIsSticky] = useState(false);
+	// const [isSticky, setIsSticky] = useState(false);
 	const [isInverted, setIsInverted] = useState(false);
 	const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -26,17 +26,17 @@ const Navbar = () => {
 		}
 	];
 
-	const handleScroll = () => {
-		const position = window.pageYOffset;
-		position > 100 ? setIsSticky(true) : setIsSticky(false);
-		setScrollPosition(position);
-	};
+	// const handleScroll = () => {
+	// 	const position = window.pageYOffset;
+	// 	position > 100 ? setIsSticky(true) : setIsSticky(false);
+	// 	setScrollPosition(position);
+	// };
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll, { passive: true });
+		// window.addEventListener("scroll", handleScroll, { passive: true });
 
 		return () => {
-			window.removeEventListener("scroll", handleScroll);
+			// window.removeEventListener("scroll", handleScroll);
 		};
 	}, [location.pathname]);
 
@@ -53,7 +53,6 @@ const Navbar = () => {
 
 	return (
 		<div className={`navigation ${isInverted ? "inverted" : ""} ${isMobileMenuOpened ? "opened" : ""}`} id="navbar">
-		{/*<div className={`navigation ${isSticky ? "sticky" : ""} ${isInverted ? "inverted" : ""} ${isMobileMenuOpened ? "opened" : ""}`} id="navbar">*/}
 			<div className="navbar">
 				<Link to="/" className="logo" title="KONER Software Solutions" onClick={() => handleMenuItemClick()}>
 					<img src={'src/assets/images/logo.svg'}/>
