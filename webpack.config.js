@@ -6,7 +6,7 @@ module.exports = {
   entry: path.join(__dirname, '/src/index.tsx'),
   devServer: {
     inline:true,
-    port: 3000,
+    port: 8080,
   },
   output: {
     filename: 'build.js',

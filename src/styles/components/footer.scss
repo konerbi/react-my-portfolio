@@ -1,0 +1,37 @@
+@import '../core';
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  border-top: 1px solid $color-border-primary;
+  box-shadow: 0 0 2rem black;
+}
+
+.footer-inner-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 1rem;
+}
+
+.social-media {
+  display: flex;
+}
+
+.footer-icon-container {
+  display: flex;
+  margin-right: 1rem;
+}
+.footer-icon {
+  display: contents;
+}
+
+.copyrights {
+  color: $color-font-primary;
+  font-size: 1rem;
+}

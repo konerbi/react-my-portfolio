@@ -1,0 +1,23 @@
+{
+  "navbar": {
+    "home": "Home",
+    "aboutMe": "About me",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "home": {},
+  "aboutMe": {},
+  "buttons": {},
+  "footer": {
+    "address": "80-180 Gdańsk, Poland",
+    "copyrights": "©{{currentYear}} KONER Software Solutions"
+  },
+  "cookies": {
+    "header": "W celu poprawy jakości naszych usług używamy ciasteczek.",
+    "description": "Możesz je zablokować poprzez zmianę ustawień przeglądarki."
+  },
+  "notFound": {
+    "header": "404",
+    "subHeader": "Page not found"
+  }
+}
