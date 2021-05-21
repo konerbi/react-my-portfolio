@@ -7,14 +7,20 @@
   },
   "home": {},
   "aboutMe": {},
+  "portfolio": {},
+  "contact": {
+    "header": "Konrad Erbetowski",
+    "address": "80-180 Gdańsk, Poland",
+    "email": "konrad.erbetowski@wp.pl"
+  },
   "buttons": {},
   "footer": {
     "address": "80-180 Gdańsk, Poland",
     "copyrights": "©{{currentYear}} KONER Software Solutions"
   },
   "cookies": {
-    "header": "W celu poprawy jakości naszych usług używamy ciasteczek.",
-    "description": "Możesz je zablokować poprzez zmianę ustawień przeglądarki."
+    "header": "We use cookies to improve the quality of our services.",
+    "description": "You can block them by changing your browser settings."
   },
   "notFound": {
     "header": "404",

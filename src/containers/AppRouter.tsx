@@ -5,6 +5,7 @@ import Portfolio from '../components/Portfolio';
 import Navbar from '../components/Navbar';
 import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer';
+import Contact from './Contact';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const AppRouter = () => (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/portfolio" exact component={Portfolio} />
+        <Route path="/contact" exact component={Contact} />
       </Switch>
       <Footer />
     </>
