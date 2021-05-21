@@ -6,9 +6,11 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   border-top: 1px solid $color-border-primary;
   box-shadow: 0 0 2rem black;
+  background-color: $color-background-primary;
+  min-height: 3rem;
 }
 
 .footer-inner-container {

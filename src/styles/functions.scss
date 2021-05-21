@@ -1,0 +1,7 @@
+@function sum($components...) {
+  $sum: 0;
+  @each $components in $components {
+    $sum: $sum + $components;
+  }
+  @return $sum;
+}
