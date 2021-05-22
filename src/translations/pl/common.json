@@ -9,12 +9,21 @@
   "aboutMe": {},
   "portfolio": {},
   "portfolioItem": {
+    "commercialText": "projekt komercyjny we współpracy<br>z {{collaborateCompany}}",
     "buttons": {
       "references": "Dowiedz się więcej",
       "see": "Zobacz",
       "github": "Źródła"
     },
     "projects": {
+      "saar": {
+        "title": "Saar Landesbank (SaarLB)",
+        "description": "Budowa portalu do obsługi klientów korporacyjnych oraz inwestorów finansujących projekty na dużą skalę dla różnych branż."
+      },
+      "bbs3d": {
+        "title": "Carolina Science Online BBS3D",
+        "description": "Platforma e-learning'owa"
+      },
       "crypto-news": {
         "title": "React Cryptocurrencies News",
         "description": "React Cryptocurrencies News opis"

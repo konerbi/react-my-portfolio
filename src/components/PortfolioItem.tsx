@@ -10,7 +10,10 @@ interface PortfolioItemProps {
   id: string;
   technologies: string[] | IconName[];
   commercial?: boolean;
+  collaborateCompany?: string;
   description?: string;
+  referenceUrl?: string;
+  sourceCodeUrl?: string;
 }
 
 const PortfolioItem = (props: PortfolioItemProps) => {
@@ -21,13 +24,31 @@ const PortfolioItem = (props: PortfolioItemProps) => {
     setIsDescriptionVisible(!isDescriptionVisible);
   }
 
+  function handleLinkButton(url: string | undefined) {
+    window.open(url, "_blank");
+  }
+
   return (
     <div className={"portfolio-item-container"}>
       <div className={"project-view-container"}>
-        <div className={"image-container"}></div>
+        <div className={"image-container"}>
+          <h2
+            dangerouslySetInnerHTML={
+              props.commercial
+                ? CreateTextHtml(
+                    t("portfolioItem.commercialText", {
+                      collaborateCompany: props.collaborateCompany,
+                    })
+                  )
+                : CreateTextHtml("")
+            }
+          ></h2>
+        </div>
         <div className={"buttons-container"}>
           <button
             className={`portfolio-button ${props.commercial ? "show" : "hide"}`}
+            disabled={props.referenceUrl ? false : true}
+            onClick={() => handleLinkButton(props.referenceUrl)}
           >
             {t("portfolioItem.buttons.references")}
           </button>
@@ -35,6 +56,8 @@ const PortfolioItem = (props: PortfolioItemProps) => {
             className={`portfolio-button ${
               !props.commercial ? "show" : "hide"
             }`}
+            disabled={props.referenceUrl ? false : true}
+            onClick={() => handleLinkButton(props.referenceUrl)}
           >
             {t("portfolioItem.buttons.see")}
           </button>
@@ -42,6 +65,8 @@ const PortfolioItem = (props: PortfolioItemProps) => {
             className={`portfolio-button ${
               !props.commercial ? "show" : "hide"
             }`}
+            disabled={props.sourceCodeUrl ? false : true}
+            onClick={() => handleLinkButton(props.sourceCodeUrl)}
           >
             {t("portfolioItem.buttons.github")}
           </button>
@@ -60,9 +85,13 @@ const PortfolioItem = (props: PortfolioItemProps) => {
       <div className={"portfolio-technologies-container"}>
         {props.technologies.map((value: string | IconName, index: number) => {
           return value === "typescript" ? (
-            <TSlogo key={`tech-icon-${props.id}-${index}`} />
+            <TSlogo
+              key={`tech-icon-${props.id}-${index}`}
+              className={"tech-icon"}
+            />
           ) : (
             <FontAwesomeIcon
+              className={"tech-icon"}
               key={`tech-icon-${props.id}-${index}`}
               icon={["fab", value as IconName]}
             />
