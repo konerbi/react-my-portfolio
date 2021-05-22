@@ -1,17 +1,17 @@
 import React from 'react';
 
 interface TSlogoProps {
-	size: string;
+	size?: string;
 }
 
 const TSlogo = (props: TSlogoProps) => {
 	const logoStyle = {
-		width: props.size,
-		height: props.size
+		width: props.size ? props.size : '3rem',
+		height: props.size ? props.size : '3rem',
 	};
 	const imgStyle = {
-		width: '100%',
-		height: '100%'
+		width: '88%',
+		height: '88%'
 	}
 	return (
 		<div style={logoStyle}>

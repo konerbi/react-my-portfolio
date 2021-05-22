@@ -1,0 +1,15 @@
+export enum TechnologiesEnum {
+  angular = "angular",
+  react = "react",
+  html5 = "html5",
+  js = "js-square",
+  css = "css3-alt",
+  sass = "sass",
+  less = "less",
+  php = "php",
+  gulp = "gulp",
+  java = "java",
+  docker = "docker",
+  nodeJs = "node-js",
+  ts = "typescript",
+}

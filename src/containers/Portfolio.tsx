@@ -1,25 +1,60 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import TSlogo from '../components/TSlogo';
+import React from 'react';
+import PortfolioItem from '../components/PortfolioItem';
+import {TechnologiesEnum} from '../models/TechnologiesEnum';
+
+interface Project {
+  id: string;
+  technologies: string[];
+  commercial: boolean;
+}
 
 const Portfolio = () => {
+  const projects: Project[] = [
+    {
+      id: "crypto-news",
+      technologies: [
+        TechnologiesEnum.react,
+        TechnologiesEnum.ts,
+        TechnologiesEnum.sass,
+      ],
+      commercial: false,
+    },
+    {
+      id: "speednet-site-react-exercise",
+      technologies: [
+        TechnologiesEnum.react,
+        TechnologiesEnum.js,
+        TechnologiesEnum.sass,
+      ],
+      commercial: false,
+    },
+    {
+      id: "pzu",
+      technologies: [
+        TechnologiesEnum.angular,
+        TechnologiesEnum.ts,
+        TechnologiesEnum.sass,
+        TechnologiesEnum.html5,
+        TechnologiesEnum.js,
+        TechnologiesEnum.php,
+        TechnologiesEnum.css,
+      ],
+      commercial: true,
+    },
+  ];
   return (
-    <div className={`portfolio-wrapper`}>
-      {/*<FontAwesomeIcon icon={["fab", "github"]} />*/}
-      {/*<FontAwesomeIcon icon={["fab", "angular"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "react"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "js-square"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "html5"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "css3-alt"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "sass"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "less"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "php"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "gulp"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "java"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "gulp"]} />*/}
-	    {/*<FontAwesomeIcon icon={["fab", "docker"]} />*/}
-	    {/*<TSlogo size={'1rem'}/>*/}
-
+    <div className={`portfolio-container`}>
+      <div className={`portfolio-wrapper`}>
+        {projects.map((project: Project, index: number) => {
+          return (
+            <PortfolioItem key={`portfolio-item-${index}`}
+              id={project.id}
+              technologies={project.technologies}
+              commercial={project.commercial}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

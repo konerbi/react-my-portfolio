@@ -1,17 +1,38 @@
 @import "../core";
 
-.portfolio-wrapper {
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.portfolio-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: center;
   align-items: center;
+}
+
+.portfolio-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
   color: $color-font-primary;
   padding-top: $top-navbar-height-desktop;
-  padding-bottom: $footer-height;
   height: calc(
     100vh - #{sum($top-navbar-height-desktop, $footer-height, 1rem)}
   );
   max-height: 100vh;
   min-height: 15rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  max-width: 72rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
+}
+
+@media screen and (max-width: 1024px){
+  .portfolio-wrapper {
+    justify-content: flex-start;
+  }
 }

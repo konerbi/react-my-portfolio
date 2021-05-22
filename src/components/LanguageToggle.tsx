@@ -3,8 +3,8 @@ import {useTranslation, withTranslation, WithTranslation} from 'react-i18next';
 
 const LanguageToggle = () => {
 	const [t, i18n] = useTranslation('common');
-	const [currentLanguage, setCurrentLanguage] = useState('pl');
-	const [alternateLanguage, setAlternateLanguage] = useState('en');
+	const [currentLanguage, setCurrentLanguage] = useState('en');
+	const [alternateLanguage, setAlternateLanguage] = useState('pl');
 	const [showList, setShowList] = useState(false);
 
 	const languages = [
@@ -35,7 +35,7 @@ const LanguageToggle = () => {
 			</a>
 			<ul className={`languages-list ${showList ? 'show' : ''}`} onMouseLeave={() => handleToggle(false)}>
 				{/*<li>*/}
-				{/*	<a title="" className="active">*/}
+				{/*	<a id="" className="active">*/}
 				{/*		{currentLanguage} <i className="speednet-icons-caret-down"></i>*/}
 				{/*	</a>*/}
 				{/*</li>*/}

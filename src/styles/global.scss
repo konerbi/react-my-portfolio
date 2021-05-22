@@ -3,19 +3,10 @@
 * {
   h1 {
     font-family: Volte-Semibold, sans-serif;
-    font-size: 60px;
-    font-weight: 400;
   }
 
-  h2 {
+  h2, h3 {
     font-family: "Volte Regular", sans-serif;
-    font-size: 48px;
-  }
-
-  h3 {
-    font-family: "Volte Regular", sans-serif;
-    font-size: 36px;
-    font-weight: 400;
   }
 
   a, p, span {
@@ -23,7 +14,9 @@
     font-size: 1rem;
     font-weight: normal;
   }
+  transition: all .2s ease;
 }
 body {
   background-color: $color-background-primary;
+  overflow: hidden;
 }

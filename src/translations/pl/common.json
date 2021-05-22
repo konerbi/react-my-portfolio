@@ -8,6 +8,27 @@
   "home": {},
   "aboutMe": {},
   "portfolio": {},
+  "portfolioItem": {
+    "buttons": {
+      "references": "Dowiedz się więcej",
+      "see": "Zobacz",
+      "github": "Źródła"
+    },
+    "projects": {
+      "crypto-news": {
+        "title": "React Cryptocurrencies News",
+        "description": "React Cryptocurrencies News opis"
+      },
+      "speednet-site-react-exercise": {
+        "title": "React Speednet Site",
+        "description": "React Speednet Site opis"
+      },
+      "pzu": {
+        "title": "PZU Cash",
+        "description": "System internetowy do przydzielania kredytów gotówkowych pracownikom. Możliwość generowania pożyczek w czasie rzeczywistym:<br>&bull; landing page z kalkulatorem kredytowym (HTML/JS)<br>&bull; system do procesowania wniosku (Angular/RxJS/NgRx)<br>&bull; panel klienta (Angular/RxJS)<br>&bull; backoffice (Angular/RxJS)"
+      }
+    }
+  },
   "contact": {
     "header": "Konrad Erbetowski",
     "address": "80-180 Gdańsk, Polska",

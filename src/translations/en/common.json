@@ -8,6 +8,27 @@
   "home": {},
   "aboutMe": {},
   "portfolio": {},
+  "portfolioItem": {
+    "buttons": {
+      "references": "See reference",
+      "see": "See live",
+      "github": "Source"
+    },
+    "projects": {
+      "crypto-news": {
+        "title": "React Cryptocurrencies News",
+        "description": "React Cryptocurrencies News description"
+      },
+      "speednet-site-react-exercise": {
+        "title": "React Speednet Site",
+        "description": "React Speednet Site description"
+      },
+      "pzu": {
+        "title": "PZU Cash",
+        "description": "Internet system for allocating cash loans to employees from the social fund with the possibility of generating loans in real-time:<br>&bull; landing page with a loan calculator (HTML/JS)<br>&bull; system for processing the application (Angular/RxJS/NgRx)<br>&bull; customer panel (Angular/RxJS)<br>&bull; backoffice (Angular/RxJS)"
+      }
+    }
+  },
   "contact": {
     "header": "Konrad Erbetowski",
     "address": "80-180 Gdańsk, Poland",
