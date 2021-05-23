@@ -5,15 +5,18 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { IconName } from "@fortawesome/free-brands-svg-icons";
 import CreateTextHtml from "../styles/utils/CreateTextHtml";
+import Slideshow from './Slideshow';
 
 interface PortfolioItemProps {
   id: string;
   technologies: string[] | IconName[];
   commercial?: boolean;
   collaborateCompany?: string;
+  collaborateCompanyUrl?: string;
   description?: string;
   referenceUrl?: string;
   sourceCodeUrl?: string;
+  images?: string[];
 }
 
 const PortfolioItem = (props: PortfolioItemProps) => {
@@ -32,17 +35,7 @@ const PortfolioItem = (props: PortfolioItemProps) => {
     <div className={"portfolio-item-container"}>
       <div className={"project-view-container"}>
         <div className={"image-container"}>
-          <h2
-            dangerouslySetInnerHTML={
-              props.commercial
-                ? CreateTextHtml(
-                    t("portfolioItem.commercialText", {
-                      collaborateCompany: props.collaborateCompany,
-                    })
-                  )
-                : CreateTextHtml("")
-            }
-          ></h2>
+          <Slideshow id={props.id} slides={props.images ? props.images : []}/>
         </div>
         <div className={"buttons-container"}>
           <button
@@ -98,6 +91,18 @@ const PortfolioItem = (props: PortfolioItemProps) => {
           );
         })}
       </div>
+      <p
+        dangerouslySetInnerHTML={
+          props.commercial
+            ? CreateTextHtml(
+            t("portfolioItem.commercialText", {
+              collaborateCompany: props.collaborateCompany,
+              collaborateCompanyUrl: props.collaborateCompanyUrl
+            })
+            )
+            : CreateTextHtml("")
+        }
+      ></p>
       <p
         className={`description-container ${
           isDescriptionVisible ? "show" : "hide"

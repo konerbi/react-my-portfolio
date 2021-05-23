@@ -9,7 +9,7 @@
   "aboutMe": {},
   "portfolio": {},
   "portfolioItem": {
-    "commercialText": "commercial project in collaboration<br>with {{collaborateCompany}}",
+    "commercialText": "Commercial project in collaboration with <a href='{{collaborateCompanyUrl}}' target='_blank'>{{collaborateCompany}}</a>",
     "buttons": {
       "references": "Know more",
       "see": "See live",
@@ -22,13 +22,13 @@
       },
       "bbs3d": {
         "title": "Carolina Science Online BBS3D",
-        "description": "E-learning platform for using on web and mobile"
+        "description": "E-learning platform for using on web and mobile.<br><br>Find out more on Youtube:<br><a href='https://youtu.be/IJFmDaoTX-Y' target='_blank'>https://youtu.be/IJFmDaoTX-Y</a>"
       },
       "crypto-news": {
         "title": "React Cryptocurrencies News",
         "description": "React Cryptocurrencies News description"
       },
-      "speednet-site-react-exercise": {
+      "speednet-site": {
         "title": "React Speednet Site",
         "description": "React Speednet Site description"
       },
