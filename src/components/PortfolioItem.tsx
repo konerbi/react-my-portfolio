@@ -4,7 +4,7 @@ import TSlogo from "../components/TSlogo";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { IconName } from "@fortawesome/free-brands-svg-icons";
-import CreateTextHtml from "../styles/utils/CreateTextHtml";
+import CreateTextHtml from "../utils/CreateTextHtml";
 import Slideshow from './Slideshow';
 
 interface PortfolioItemProps {

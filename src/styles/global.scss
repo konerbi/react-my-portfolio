@@ -15,6 +15,10 @@
     font-weight: normal;
   }
   transition: all .2s ease;
+  box-sizing: unset;
+}
+*::before, *::after {
+  box-sizing: unset;
 }
 body {
   background-color: $color-background-primary;

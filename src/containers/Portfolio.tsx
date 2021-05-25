@@ -94,8 +94,8 @@ const Portfolio = () => {
       <div className={`portfolio-wrapper`}>
         {projects.map((project: Project, index: number) => {
           return (
-            // <LazyLoad key={`portfolio-item-${index}`} offset={100}>
-              <PortfolioItem key={`portfolio-item-${index}`}
+            <LazyLoad key={`portfolio-item-${index}`} offset={100}>
+              <PortfolioItem
                 id={project.id}
                 technologies={project.technologies}
                 commercial={project.commercial}
@@ -105,7 +105,7 @@ const Portfolio = () => {
                 sourceCodeUrl={project.sourceCodeUrl}
                 images={project.images}
               />
-            // </LazyLoad>
+            </LazyLoad>
           );
         })}
       </div>
