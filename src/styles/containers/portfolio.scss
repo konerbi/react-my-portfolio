@@ -29,6 +29,10 @@
   max-width: 72rem;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  .lazyload-wrapper {
+    width: unset;
+  }
 }
 
 @media screen and (max-width: 1024px){
