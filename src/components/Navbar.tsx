@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import LanguageToggle from './LanguageToggle';
 import {useTranslation} from "react-i18next";
+import {EnterAnimationService} from '../utils/enter-animation.service';
 
 const Navbar = () => {
 	const location = useLocation();
@@ -10,6 +11,7 @@ const Navbar = () => {
 	const [isInverted, setIsInverted] = useState(false);
 	const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 	const [scrollPosition, setScrollPosition] = useState(0);
+	const [animateOnEnter, setAnimateOnEnter] = useState(false);
 
 	const menuItems = [
 		{
@@ -26,16 +28,12 @@ const Navbar = () => {
 		}
 	];
 
-	// const handleScroll = () => {
-	// 	const position = window.pageYOffset;
-	// 	position > 100 ? setIsSticky(true) : setIsSticky(false);
-	// 	setScrollPosition(position);
-	// };
-
 	useEffect(() => {
 		// window.addEventListener("scroll", handleScroll, { passive: true });
+		EnterAnimationService.startAnimationOnEnter(setAnimateOnEnter);
 
 		return () => {
+			EnterAnimationService.clearAnim();
 			// window.removeEventListener("scroll", handleScroll);
 		};
 	}, [location.pathname]);
@@ -52,7 +50,7 @@ const Navbar = () => {
 	}
 
 	return (
-		<div className={`navigation ${isInverted ? "inverted" : ""} ${isMobileMenuOpened ? "opened" : ""}`} id="navbar">
+		<div className={`navigation ${isInverted ? "inverted" : ""} ${isMobileMenuOpened ? "opened" : ""} ${animateOnEnter ? "open" : ""}`} id="navbar">
 			<div className="navbar">
 				<Link to="/" className="logo" title="KONER Software Solutions" onClick={() => handleMenuItemClick()}>
 					<img src={'src/assets/images/logo.svg'}/>

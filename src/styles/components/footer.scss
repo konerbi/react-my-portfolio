@@ -11,6 +11,11 @@
   box-shadow: 0 0 2rem $color-shadow;
   background-color: $color-background-primary;
   min-height: 3rem;
+  margin-bottom: -4rem;
+  &.open {
+    transition: all 0.8s ease;
+    margin-bottom: 0;
+  }
 }
 
 .footer-inner-container {

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {EnterAnimationService} from '../utils/enter-animation.service';
 
 const Footer = () => {
   const [t, i18n] = useTranslation("common");
   const [currentYear, setCurrentYear] = useState<number | null>(null);
+  const [animateOnEnter, setAnimateOnEnter] = useState(false);
 
   const socialItems: any[] = [
     {
@@ -20,12 +22,18 @@ const Footer = () => {
   ];
 
   useEffect(() => {
+    EnterAnimationService.startAnimationOnEnter(setAnimateOnEnter);
+
     let currentDate = new Date();
     setCurrentYear(currentDate.getFullYear());
+
+    return () => {
+      EnterAnimationService.clearAnim();
+    };
   }, []);
 
   return (
-    <div className={`footer-container`}>
+    <div className={`footer-container ${animateOnEnter ? "open" : ""}`}>
       <div className={`footer-inner-container`}>
         <div className={`social-media`}>
           {socialItems.map((value, index) => {

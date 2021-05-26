@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import LazyLoad from "react-lazyload";
 import PortfolioItem from "../components/PortfolioItem";
 import { TechnologiesEnum } from "../models/TechnologiesEnum";
+import {EnterAnimationService} from '../utils/enter-animation.service';
 
 interface Project {
   id: string;
@@ -92,23 +93,14 @@ const Portfolio = () => {
     },
   ];
 
-  let animTimeout: number;
-
-  function startAnimationOnEnter() {
-    animTimeout = setTimeout(startAnim, 100, true);
-  }
-  function startAnim(flag: boolean) {
-    clearTimeout(animTimeout);
-    setAnimateOnEnter(flag);
-  }
-
   useEffect(() => {
-    startAnimationOnEnter();
+    EnterAnimationService.startAnimationOnEnter(setAnimateOnEnter);
 
     return () => {
-      clearTimeout(animTimeout);
+      EnterAnimationService.clearAnim();
     };
   }, []);
+
   return (
     <div className={`portfolio-container`}>
       <div className={`portfolio-wrapper ${animateOnEnter ? "open" : ""}`}>
