@@ -26,4 +26,7 @@ body {
 }
 a {
   color: $color-link;
+  &:hover {
+    color: $color-hover;
+  }
 }

@@ -245,7 +245,8 @@
       display: block;
       width: 0;
       height: 2px;
-      background: currentColor;
+      background: $color-button-quaternary;
+              //currentColor;
       opacity: 0;
       transition: width .2s ease, opacity .2s ease;
     }
@@ -253,6 +254,13 @@
       width: 100%;
       opacity: 1;
       transition: width .2s ease,opacity .2s ease;
+    }
+    &.navbar-element-active {
+      &:after {
+        width: 100%;
+        opacity: 1;
+        //transition: width .2s ease,opacity .2s ease;
+      }
     }
   }
   .link-special-2:hover:after {
