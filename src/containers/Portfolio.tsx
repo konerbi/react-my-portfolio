@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LazyLoad from "react-lazyload";
 import PortfolioItem from "../components/PortfolioItem";
 import { TechnologiesEnum } from "../models/TechnologiesEnum";
@@ -15,6 +15,8 @@ interface Project {
 }
 
 const Portfolio = () => {
+  const [animateOnEnter, setAnimateOnEnter] = useState(false);
+
   const projects: Project[] = [
     {
       id: "pzu",
@@ -89,9 +91,27 @@ const Portfolio = () => {
       sourceCodeUrl: "https://github.com/konerbi/react-speednet-site-project",
     },
   ];
+
+  let animTimeout: number;
+
+  function startAnimationOnEnter() {
+    animTimeout = setTimeout(startAnim, 100, true);
+  }
+  function startAnim(flag: boolean) {
+    clearTimeout(animTimeout);
+    setAnimateOnEnter(flag);
+  }
+
+  useEffect(() => {
+    startAnimationOnEnter();
+
+    return () => {
+      clearTimeout(animTimeout);
+    };
+  }, []);
   return (
     <div className={`portfolio-container`}>
-      <div className={`portfolio-wrapper`}>
+      <div className={`portfolio-wrapper ${animateOnEnter ? "open" : ""}`}>
         {projects.map((project: Project, index: number) => {
           return (
             <LazyLoad key={`portfolio-item-${index}`} offset={100}>

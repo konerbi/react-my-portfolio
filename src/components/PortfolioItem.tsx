@@ -46,9 +46,16 @@ const PortfolioItem = (props: PortfolioItemProps) => {
             }`}
             onMouseEnter={() => handleToggleSlideshow()}
           >
-            <img src={props.images ? `src/assets/images/portfolio/${props.id}/${props.images[0]}` : ""} />
+            <img
+              src={
+                props.images
+                  ? `src/assets/images/portfolio/${props.id}/${props.images[0]}`
+                  : ""
+              }
+            />
           </div>
-          <div onMouseLeave={() => handleToggleSlideshow()}
+          <div
+            onMouseLeave={() => handleToggleSlideshow()}
             className={`slideshow-container ${
               isSlideshowVisible ? "show" : "hide"
             }`}
@@ -126,14 +133,17 @@ const PortfolioItem = (props: PortfolioItemProps) => {
             : CreateTextHtml("")
         }
       ></p>
-      <p
+      <div
         className={`description-container ${
           isDescriptionVisible ? "show" : "hide"
         }`}
-        dangerouslySetInnerHTML={CreateTextHtml(
-          t(`portfolioItem.projects.${props.id}.description`)
-        )}
-      ></p>
+      >
+        <p
+          dangerouslySetInnerHTML={CreateTextHtml(
+            t(`portfolioItem.projects.${props.id}.description`)
+          )}
+        ></p>
+      </div>
     </div>
   );
 };

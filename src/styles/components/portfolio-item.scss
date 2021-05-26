@@ -125,11 +125,21 @@ a {
 .description-container {
   font-family: "Volte Light", sans-serif;
   font-size: 1.2rem;
+  overflow: auto;
+  p {
+    transition: all 0.5s ease;
+  }
   &.show {
-    display: block;
+    p {
+      opacity: 1;
+      margin-top: 0;
+    }
   }
   &.hide {
-    display: none;
+    p {
+      opacity: 1;
+      margin-top: -100%;
+    }
   }
 }
 

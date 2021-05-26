@@ -29,9 +29,34 @@
   max-width: 72rem;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  .lazyload-wrapper {
+    &:nth-child(odd) {
+      .portfolio-item-container {
+        margin-left: -100%;
+        opacity: 0;
+      }
+    }
+    &:nth-child(even) {
+      .portfolio-item-container {
+        margin-left: 100%;
+        opacity: 0;
+      }
+    }
+  }
+
+  &.open {
+    .lazyload-wrapper {
+      .portfolio-item-container {
+        margin-left: 0;
+        opacity: 1;
+        transition: all 1s ease;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .portfolio-wrapper {
     justify-content: flex-start;
 
