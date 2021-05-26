@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import LanguageToggle from './LanguageToggle';
 import {useTranslation} from "react-i18next";
-import {EnterAnimationService} from '../utils/enter-animation.service';
+import {EnterAnimationService} from '../services/enter-animation.service';
 
 const Navbar = () => {
 	const location = useLocation();

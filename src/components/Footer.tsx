@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {EnterAnimationService} from '../utils/enter-animation.service';
+import {EnterAnimationService} from '../services/enter-animation.service';
 
 const Footer = () => {
   const [t, i18n] = useTranslation("common");

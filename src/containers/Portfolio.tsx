@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import LazyLoad from "react-lazyload";
 import PortfolioItem from "../components/PortfolioItem";
 import { TechnologiesEnum } from "../models/TechnologiesEnum";
-import {EnterAnimationService} from '../utils/enter-animation.service';
+import {EnterAnimationService} from '../services/enter-animation.service';
 
 interface Project {
   id: string;
