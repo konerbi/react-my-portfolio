@@ -5,7 +5,7 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { IconName } from "@fortawesome/free-brands-svg-icons";
 import CreateTextHtml from "../utils/CreateTextHtml";
-import Slideshow from './Slideshow';
+import Slideshow from "./Slideshow";
 
 interface PortfolioItemProps {
   id: string;
@@ -22,6 +22,7 @@ interface PortfolioItemProps {
 const PortfolioItem = (props: PortfolioItemProps) => {
   const [t, i18n] = useTranslation("common");
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+  const [isSlideshowVisible, setIsSlideshowVisible] = useState(false);
 
   function handleToggleInfo() {
     setIsDescriptionVisible(!isDescriptionVisible);
@@ -31,12 +32,34 @@ const PortfolioItem = (props: PortfolioItemProps) => {
     window.open(url, "_blank");
   }
 
+  function handleToggleSlideshow() {
+    setIsSlideshowVisible(!isSlideshowVisible);
+  }
+
   return (
     <div className={"portfolio-item-container"}>
       <div className={"project-view-container"}>
         <div className={"image-container"}>
-          <Slideshow id={props.id} slides={props.images ? props.images : []}/>
+          <div
+            className={`image-placeholder ${
+              !isSlideshowVisible ? "show" : "hide"
+            }`}
+            onMouseEnter={() => handleToggleSlideshow()}
+          >
+            <img src={props.images ? `src/assets/images/portfolio/${props.id}/${props.images[0]}` : ""} />
+          </div>
+          <div onMouseLeave={() => handleToggleSlideshow()}
+            className={`slideshow-container ${
+              isSlideshowVisible ? "show" : "hide"
+            }`}
+          >
+            <Slideshow
+              id={props.id}
+              slides={props.images ? props.images : []}
+            />
+          </div>
         </div>
+
         <div className={"buttons-container"}>
           <button
             className={`portfolio-button ${props.commercial ? "show" : "hide"}`}
@@ -95,11 +118,11 @@ const PortfolioItem = (props: PortfolioItemProps) => {
         dangerouslySetInnerHTML={
           props.commercial
             ? CreateTextHtml(
-            t("portfolioItem.commercialText", {
-              collaborateCompany: props.collaborateCompany,
-              collaborateCompanyUrl: props.collaborateCompanyUrl
-            })
-            )
+                t("portfolioItem.commercialText", {
+                  collaborateCompany: props.collaborateCompany,
+                  collaborateCompanyUrl: props.collaborateCompanyUrl,
+                })
+              )
             : CreateTextHtml("")
         }
       ></p>

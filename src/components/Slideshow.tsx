@@ -9,7 +9,7 @@ interface SlideshowProps {
 const Slideshow = (props: SlideshowProps) => {
   return (
     <>
-      <Carousel controls={props.slides.length > 0}>
+      <Carousel controls={props.slides.length > 0} pause={false} interval={2000}>
         {props.slides.map((slideSrc: string, index: number) => {
           return (
             <Carousel.Item key={`slide-item-${props.id}-${index}`}>
