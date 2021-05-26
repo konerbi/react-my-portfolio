@@ -149,7 +149,7 @@
 }
 .opened {
   .link {
-    color: $color-font-primary !important;
+    //color: $color-font-primary !important;
     font-size: 21px !important;
   }
   .link-special-2 {
@@ -259,7 +259,6 @@
       &:after {
         width: 100%;
         opacity: 1;
-        //transition: width .2s ease,opacity .2s ease;
       }
     }
   }
@@ -337,6 +336,12 @@
         &:not(:last-child) {
           margin-bottom: 40px;
         }
+
+        .link {
+          &.navbar-element-active {
+            color: $color-button;
+          }
+        }
       }
 
       &.opened {
@@ -347,6 +352,7 @@
       }
     }
   }
+
   .btn-menu-toggle {
     display: block;
   }
