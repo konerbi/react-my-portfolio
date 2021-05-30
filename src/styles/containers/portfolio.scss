@@ -50,7 +50,7 @@
       .portfolio-item-container {
         margin-left: 0;
         opacity: 1;
-        transition: all 1s ease;
+        transition: margin-left 1s ease 0s, opacity 0.7s ease 0.3s;
       }
     }
   }

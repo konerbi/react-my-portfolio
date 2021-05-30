@@ -1,1 +1,40 @@
+@import "../core";
 
+.home-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
+}
+.top-scene-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background-color: #006767;
+  //background: radial-gradient(circle, rgba(0,64,64,1) 0%, rgba(0,103,103,1) 41%, rgba(1,140,140,1) 100%);
+  background: radial-gradient(circle, rgba(1,140,140,1) 0%, rgba(0,103,103,1) 50%, rgba(0,64,64,1) 100%);
+
+  h1 {
+    color: $color-font-primary;
+    position: absolute;
+    z-index: 1000;
+    font-size: 3.5rem;
+    text-shadow: 0.3rem 0.3rem 0.3rem $color-shadow-secondary;
+  }
+
+  .top-background-container {
+
+  }
+}
+.top-background-element {
+  position: absolute;
+  //background-color: #2bcacd;
+  background: radial-gradient(ellipse at -10% -10%, #eaffff 0%, #2bcacd 49%, #278d8f 78%);
+  box-shadow: 2rem 2rem 1rem $color-shadow-secondary;
+  border-radius: 0.3rem;
+}

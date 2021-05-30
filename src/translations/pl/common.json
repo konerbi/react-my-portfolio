@@ -5,7 +5,21 @@
     "portfolio": "Portfolio",
     "contact": "Kontakt"
   },
-  "home": {},
+  "home": {
+    "topSceneHeader": "nie wierzę<br>pustym sloganom,<br>więc takich tu nie będzie<br>&ndash; tylko konkrety",
+    "qualities": {
+      "experience": "lat<br>doświadczenia",
+      "knowledge": "S.O.L.I.D.ne<br>podstawy<br>wiedzy",
+      "code": "maniak<br>czystego kodu<br>& DRY",
+      "rwd": "przyjazny<br>mobilkom",
+      "graphics": "silny<br>zmysł<br>estetyki",
+      "pixel": "dokładność<br>co do piksela",
+      "teamplayer": "...poza tym, zostałem programistą po to by <s>nie</s> rozmawiać z ludźmi :)"
+    },
+    "technologies": {
+      "header": "technologie i narzędzia"
+    }
+  },
   "aboutMe": {},
   "portfolio": {},
   "portfolioItem": {

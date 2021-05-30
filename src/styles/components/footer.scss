@@ -12,6 +12,7 @@
   background-color: $color-background-primary;
   min-height: 3rem;
   margin-bottom: -4rem;
+  z-index: 2000;
   &.open {
     transition: all 0.8s ease;
     margin-bottom: 0;
