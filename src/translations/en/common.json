@@ -6,7 +6,7 @@
     "contact": "Contact"
   },
   "home": {
-    "topSceneHeader": "I don't believe<br>in empty slogans<br>so here won't be any<br>&ndash; only specifics",
+    "topSceneHeader": "I don't believe<br>in <span>empty</span> slogans<br>so won't be any inhere<br>&ndash; only specifics",
     "qualities": {
       "experience": "years<br>experience",
       "solid": "S.O.L.I.D.",
