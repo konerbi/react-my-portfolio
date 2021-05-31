@@ -9,12 +9,14 @@
     "topSceneHeader": "I don't believe<br>in empty slogans<br>so here won't be any<br>&ndash; only specifics",
     "qualities": {
       "experience": "years<br>experience",
-      "knowledge": "S.O.L.I.D.<br>knowledge<br>foundations",
+      "solid": "S.O.L.I.D.",
+      "knowledge": "knowledge<br>foundations",
+      "codeIcon": "&lt;/&gt;<br>{...}",
       "code": "clear-code<br>& DRY<br>maniac",
       "rwd": "I'm mobile<br>friendly",
       "graphics": "strong<br>aesthetic<br>sense",
       "pixel": "pixel<br>perfect",
-      "teamplayer": "...and I became a programmer<s>not</s> to talk to people :)"
+      "teamplayer": "...and I became a programmer <s>not</s> to talk to people :)"
     },
     "technologies": {
       "header": "technologies & tools"

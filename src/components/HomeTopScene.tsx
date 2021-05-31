@@ -30,6 +30,8 @@ const HomeTopScene = () => {
             const itemStyle = {
               width: itemWidth + "vw",
               height: itemHeight + "vh",
+              // paddingTop: Math.floor(Math.random() * 100) + "vh",
+              // paddingLeft: Math.floor(Math.random() * 100) + "vw",
               top: Math.floor(Math.random() * 100) + "vh",
               left: Math.floor(Math.random() * 100) + "vw",
               // boxShadow: shadowValue,

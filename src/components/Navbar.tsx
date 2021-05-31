@@ -7,7 +7,6 @@ import {EnterAnimationService} from '../services/enter-animation.service';
 const Navbar = () => {
 	const location = useLocation();
 	const [t, i18n] = useTranslation('common');
-	// const [isSticky, setIsSticky] = useState(false);
 	const [isInverted, setIsInverted] = useState(false);
 	const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -29,12 +28,10 @@ const Navbar = () => {
 	];
 
 	useEffect(() => {
-		// window.addEventListener("scroll", handleScroll, { passive: true });
 		EnterAnimationService.startAnimationOnEnter(setAnimateOnEnter);
 
 		return () => {
 			EnterAnimationService.clearAnim();
-			// window.removeEventListener("scroll", handleScroll);
 		};
 	}, [location.pathname]);
 

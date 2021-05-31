@@ -16,6 +16,7 @@
   }
   transition: all .2s ease;
   box-sizing: unset;
+  text-rendering: optimizeSpeed;
 }
 *::before, *::after {
   box-sizing: unset;

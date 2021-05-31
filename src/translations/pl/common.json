@@ -9,7 +9,9 @@
     "topSceneHeader": "nie wierzę<br>pustym sloganom,<br>więc takich tu nie będzie<br>&ndash; tylko konkrety",
     "qualities": {
       "experience": "lat<br>doświadczenia",
-      "knowledge": "S.O.L.I.D.ne<br>podstawy<br>wiedzy",
+      "solid": "S.O.L.I.D.ne",
+      "knowledge": "podstawy",
+      "codeIcon": "&lt;/&gt;<br>{...}",
       "code": "maniak<br>czystego kodu<br>& DRY",
       "rwd": "przyjazny<br>mobilkom",
       "graphics": "silny<br>zmysł<br>estetyki",

@@ -22,7 +22,7 @@
   color: $color-font-primary;
   padding-top: $top-navbar-height-desktop;
   height: calc(
-    100vh - #{sum($top-navbar-height-desktop, $footer-height, 1rem)}
+    100vh - #{sum($top-navbar-height-desktop, $footer-height, 0.5rem)}
   );
   max-height: 100vh;
   min-height: 15rem;
