@@ -69,7 +69,7 @@ const Navbar = () => {
 								</li>
 						}))}
 						<li className="item">
-							<LanguageToggle />
+							<LanguageToggle onChangedLanguage={() => handleMenuItemClick()} />
 						</li>
 					</ul>
 					<div id="btn-menu-toggle" className={`btn-menu-toggle ${isMobileMenuOpened ? "opened" : ""}`}

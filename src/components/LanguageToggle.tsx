@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {useTranslation, withTranslation, WithTranslation} from 'react-i18next';
 
-const LanguageToggle = () => {
+const LanguageToggle = ({onChangedLanguage}: any) => {
 	const [t, i18n] = useTranslation('common');
 	const [currentLanguage, setCurrentLanguage] = useState('en');
 	const [alternateLanguage, setAlternateLanguage] = useState('pl');
@@ -14,7 +14,12 @@ const LanguageToggle = () => {
 		{
 			lang: 'en'
 		}
-	]
+	];
+
+	const changedLanguage = useCallback(() => {
+		// call the callback
+		onChangedLanguage();
+	}, [onChangedLanguage])
 
 	function handleToggle(value = true) {
 		setShowList(value);
@@ -25,6 +30,7 @@ const LanguageToggle = () => {
 		setAlternateLanguage(currentLanguage);
 		setCurrentLanguage(value);
 		setShowList(false);
+		changedLanguage();
 	}
 
 	return (

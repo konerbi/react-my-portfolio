@@ -24,19 +24,19 @@ const HomeQualities = () => {
 					<div className={'quality-icon text-icon'} dangerouslySetInnerHTML={CreateTextHtml(t('home.qualities.codeIcon'))}></div>
 					<div className={'quality-text'} dangerouslySetInnerHTML={CreateTextHtml(t('home.qualities.code'))}></div>
 				</div>
-				<div className={'quality-item'}>
+				<div className={'quality-item with-icon'}>
 					<div className={'quality-icon'}>
 						<img src={`src/assets/images/home/responsive.svg`}></img>
 					</div>
 					<div className={'quality-text'} dangerouslySetInnerHTML={CreateTextHtml(t('home.qualities.rwd'))}></div>
 				</div>
-				<div className={'quality-item'}>
+				<div className={'quality-item with-icon'}>
 					<div className={'quality-icon'}>
 						<img src={`src/assets/images/home/computer.svg`}></img>
 					</div>
 					<div className={'quality-text'} dangerouslySetInnerHTML={CreateTextHtml(t('home.qualities.graphics'))}></div>
 				</div>
-				<div className={'quality-item'}>
+				<div className={'quality-item with-icon'}>
 					<div className={'quality-icon'}>
 						<img src={`src/assets/images/home/grid.svg`}></img>
 					</div>
