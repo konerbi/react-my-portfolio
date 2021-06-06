@@ -2,84 +2,107 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import CreateTextHtml from "../utils/CreateTextHtml";
 
-const HomeQualities = () => {
+interface HomeQualitiesProps {
+  isQualityItemOutsideViewport: boolean;
+}
+
+const HomeQualities = (props: HomeQualitiesProps) => {
   const [t, i18n] = useTranslation("common");
 
+  const qualityItems = [
+    {
+      isVertical: false,
+      isWide: false,
+      isTextIcon: true,
+      iconText: "15+",
+      iconSrc: null,
+      text: "experience",
+    },
+    {
+      isVertical: true,
+      isWide: false,
+      isTextIcon: true,
+      iconText: "solid",
+      iconSrc: null,
+      text: "knowledge",
+    },
+    {
+      isVertical: false,
+      isWide: false,
+      isTextIcon: true,
+      iconText: "codeIcon",
+      iconSrc: null,
+      text: "code",
+    },
+    {
+      isVertical: false,
+      isWide: false,
+      isTextIcon: false,
+      iconText: null,
+      iconSrc: "responsive.svg",
+      text: "rwd",
+    },
+    {
+      isVertical: false,
+      isWide: false,
+      isTextIcon: false,
+      iconText: null,
+      iconSrc: "computer.svg",
+      text: "graphics",
+    },
+    {
+      isVertical: false,
+      isWide: false,
+      isTextIcon: false,
+      iconText: null,
+      iconSrc: "grid.svg",
+      text: "pixel",
+    },
+    {
+      isVertical: false,
+      isWide: true,
+      isTextIcon: false,
+      iconText: null,
+      iconSrc: "team.svg",
+      text: "teamplayer",
+    },
+  ];
+
   return (
-    <div className={"home-qualities-container"}>
+    <div className={"home-qualities-container"} id={"home-qualities-container"}>
       <div className={"qualities-box"}>
-        <div className={"quality-item"}>
-          <div className={"quality-icon text-icon"}>15+</div>
-          <div
-            className={"quality-text"}
-            dangerouslySetInnerHTML={CreateTextHtml(
-              t("home.qualities.experience")
-            )}
-          ></div>
-        </div>
-        <div className={"quality-item vertical"}>
-          <div className={"quality-icon text-icon"}>
-            {t("home.qualities.solid")}
-          </div>
-          <div
-            className={"quality-text"}
-            dangerouslySetInnerHTML={CreateTextHtml(
-              t("home.qualities.knowledge")
-            )}
-          ></div>
-        </div>
-        <div className={"quality-item"}>
-          <div
-            className={"quality-icon text-icon"}
-            dangerouslySetInnerHTML={CreateTextHtml(
-              t("home.qualities.codeIcon")
-            )}
-          ></div>
-          <div
-            className={"quality-text"}
-            dangerouslySetInnerHTML={CreateTextHtml(t("home.qualities.code"))}
-          ></div>
-        </div>
-        <div className={"quality-item with-icon"}>
-          <div className={"quality-icon"}>
-            <img src={`src/assets/images/home/responsive.svg`}></img>
-          </div>
-          <div
-            className={"quality-text"}
-            dangerouslySetInnerHTML={CreateTextHtml(t("home.qualities.rwd"))}
-          ></div>
-        </div>
-        <div className={"quality-item with-icon"}>
-          <div className={"quality-icon"}>
-            <img src={`src/assets/images/home/computer.svg`}></img>
-          </div>
-          <div
-            className={"quality-text"}
-            dangerouslySetInnerHTML={CreateTextHtml(
-              t("home.qualities.graphics")
-            )}
-          ></div>
-        </div>
-        <div className={"quality-item with-icon"}>
-          <div className={"quality-icon"}>
-            <img src={`src/assets/images/home/grid.svg`}></img>
-          </div>
-          <div
-            className={"quality-text"}
-            dangerouslySetInnerHTML={CreateTextHtml(t("home.qualities.pixel"))}
-          ></div>
-        </div>
-        <div className={"quality-item wide"}>
-          <div className={"quality-icon"}>
-            <img src={`src/assets/images/home/team.svg`}></img>
-          </div>
-          <div
-            className={"quality-text"}
-            dangerouslySetInnerHTML={CreateTextHtml(
-              t("home.qualities.teamplayer")
-            )}
-          ></div>
-        </div>
+        {qualityItems.map((item, index) => {
+          return (
+            <div
+              key={"quality-item-" + index}
+              className={`quality-item ${
+                props.isQualityItemOutsideViewport ? "hide-onload" : ""
+              }
+               ${item.isVertical ? `vertical` : ``}
+               ${!item.isTextIcon ? `with-icon` : ``}
+               ${item.isWide ? `wide` : ``}`}
+            >
+              {item.isTextIcon ? (
+                <div
+                  className={`quality-icon text-icon`}
+                  dangerouslySetInnerHTML={CreateTextHtml(
+                    t(`home.qualities.${item.iconText}`)
+                  )}
+                ></div>
+              ) : (
+                <div className={`quality-icon`}>
+                  <img src={`src/assets/images/home/${item.iconSrc}`}></img>
+                </div>
+              )}
+              <div
+                className={"quality-text"}
+                dangerouslySetInnerHTML={CreateTextHtml(
+                  t(`home.qualities.${item.text}`)
+                )}
+              ></div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

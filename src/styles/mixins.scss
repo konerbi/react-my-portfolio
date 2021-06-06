@@ -1,0 +1,9 @@
+@mixin linearShowUp($selector, $from: 1, $to: 3) {
+  @for $i from $from through $to {
+    #{$selector}:nth-child(n + #{$i}) {
+      -webkit-transform: translateY($i * 50px);
+      transform: translateY($i * 50px);
+      opacity: 0;
+    }
+  }
+}
