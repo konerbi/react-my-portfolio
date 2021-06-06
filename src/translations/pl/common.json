@@ -6,7 +6,7 @@
     "contact": "Kontakt"
   },
   "home": {
-    "topSceneHeader": "Nie ufam<br><span>pustym</span> sloganom,<br>więc takich tu nie będzie<br>&ndash; tylko konkrety",
+    "topSceneHeader": "Nie wierzę<br><span>pustym</span> sloganom,<br>więc takich tu nie będzie<br>&ndash; tylko konkrety",
     "qualities": {
       "experience": "lat<br>doświadczenia",
       "solid": "S.O.L.I.D.ne",
@@ -22,7 +22,10 @@
       "header": "technologie i narzędzia"
     }
   },
-  "aboutMe": {},
+  "about": {
+    "header": "Cześć!",
+    "text": "<p>Mam na imię Konrad, mieszkam w pięknym Gdańsku. Jestem frontend developerem.</p><p>Dlaczego wybrałem front? Sięgając pamięcią wstecz do moich pierwszych fascynacji światem cyfrowym, zawsze interesowało mnie połączenie technologii ze sztuką. Frontend development pozwala mi łączyć oba te aspekty poprzez programowanie i pracę z grafiką.</p><p>Poza zainteresowaniami związanymi z moją pracą, mam jeszcze kilka innych hobby. Ogólnie mówiąc, uwielbiam tworzyć COŚ z niczego. Modelarstwo redukcyjne, tworzenie biżuterii i grafika z użyciem ołówka, kredek i tuszu, pozwalają mi wyrazić siebie. Poza tym uwielbiam grać na gitarze, wędkować i podróżować.</p><p>Jeśli chcesz dowiedzieć się więcej &ndash; spojrzyj w moje <a href='src/assets/documents/KonradErbetowski_CV.pdf' download=\"KonradErbetowski_CV.pdf\"><b>CV</b></a>.</p>"
+  },
   "portfolio": {},
   "portfolioItem": {
     "commercialText": "Projekt komercyjny we współpracy z <a href='{{collaborateCompanyUrl}}' target='_blank'>{{collaborateCompany}}</a>",

@@ -1,4 +1,4 @@
-@import '../core';
+@import "../core";
 
 .navigation {
   max-height: 102.5px;
@@ -15,10 +15,11 @@
   width: 100%;
   min-height: 5rem;
   border-bottom: 1px solid $color-border-primary;
-  transition: padding .2s ease,background-color .2s ease,border-bottom-color .2s ease;
+  transition: padding 0.2s ease, background-color 0.2s ease,
+    border-bottom-color 0.2s ease;
   box-sizing: border-box;
   box-shadow: 0 0 2rem $color-shadow;
-  background-color: $color-background-primary;
+  background-color: $color-background-nav-footer;
   margin-top: -5rem;
   z-index: 2000;
 
@@ -37,7 +38,8 @@
     .btn-menu-toggle span,
     .sticky .btn-menu-toggle span {
       background: $color-font-secondary;
-      &:before, &:after {
+      &:before,
+      &:after {
         background: $color-font-secondary;
       }
     }
@@ -94,12 +96,13 @@
           font-family: Volte-Semibold, sans-serif;
           font-size: 21px;
           line-height: 26px;
-          letter-spacing: .8px;
+          letter-spacing: 0.8px;
           color: $color-font-primary;
           text-align: center;
           text-decoration: none;
           text-transform: uppercase;
-          transition: color .2s ease,font-size .2s ease,background-color .2s ease;
+          transition: color 0.2s ease, font-size 0.2s ease,
+            background-color 0.2s ease;
 
           a {
             text-decoration: none;
@@ -132,7 +135,8 @@
   }
   .btn-menu-toggle span {
     background: $color-font-secondary;
-    &:before, &:after {
+    &:before,
+    &:after {
       background: $color-font-secondary;
     }
   }
@@ -158,8 +162,8 @@
   position: absolute;
   top: 50%;
   right: 15px;
-  -webkit-transform: translate(0,-50%);
-  transform: translate(0,-50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   width: 40px;
   height: 40px;
   background: 0 0;
@@ -175,16 +179,17 @@
     width: 20px;
     height: 2px;
     background: $color-font-primary;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 
-    &:before, &:after {
-      content: '';
+    &:before,
+    &:after {
+      content: "";
       position: absolute;
       display: block;
       width: 20px;
       height: 2px;
       background: $color-font-primary;
-      transition: all .2s ease;
+      transition: all 0.2s ease;
     }
     &:before {
       top: -8px;
@@ -197,7 +202,8 @@
     span {
       background: 0 0 !important;
 
-      &:before, &:after {
+      &:before,
+      &:after {
         background: $color-font-primary !important;
       }
       &:before {
@@ -220,28 +226,28 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,.85);
+  background: rgba(0, 0, 0, 0.85);
   opacity: 0;
   visibility: hidden;
   z-index: 100;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
 }
 
 @media (min-width: 1280px) {
   .link {
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 0;
       height: 2px;
-      background: $color-button-quaternary;
+      background: $color-background-quaternary;
       opacity: 0;
-      transition: width .2s ease, opacity .2s ease;
+      transition: width 0.2s ease, opacity 0.2s ease;
     }
     &:hover:after {
       width: 100%;
       opacity: 1;
-      transition: width .2s ease,opacity .2s ease;
+      transition: width 0.2s ease, opacity 0.2s ease;
     }
     &.navbar-element-active {
       &:after {
@@ -266,7 +272,6 @@
       }
     }
   }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -286,7 +291,6 @@
       max-width: 30vw;
     }
   }
-
 
   .navbar {
     .main-menu {
@@ -313,8 +317,8 @@
         z-index: 1;
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
-        transition: -webkit-transform .2s ease;
-        transition: transform .2s ease;
+        transition: -webkit-transform 0.2s ease;
+        transition: transform 0.2s ease;
       }
 
       .item {

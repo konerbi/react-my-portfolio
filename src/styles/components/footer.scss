@@ -1,4 +1,4 @@
-@import '../core';
+@import "../core";
 
 .footer-container {
   display: flex;
@@ -9,7 +9,7 @@
   width: 100%;
   border-top: 1px solid $color-border-primary;
   box-shadow: 0 0 2rem $color-shadow;
-  background-color: $color-background-primary;
+  background-color: $color-background-nav-footer;
   min-height: 3rem;
   margin-bottom: -4rem;
   z-index: 2000;

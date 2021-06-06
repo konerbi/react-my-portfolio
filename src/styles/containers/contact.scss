@@ -22,11 +22,19 @@
 
   img {
     width: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    &.open {
+      opacity: 1;
+    }
   }
 }
 .contact-data {
   margin-top: 2rem;
   text-align: end;
+  opacity: 0;
+  transition: all 0.5s ease 0.4s;
 
   h3 {
     font-size: 2rem;
@@ -37,5 +45,9 @@
   a {
     font-size: 1.5rem;
     margin: 0 0 0.5rem;
+  }
+
+  &.open {
+    opacity: 1;
   }
 }

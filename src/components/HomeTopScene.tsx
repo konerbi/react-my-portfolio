@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CreateTextHtml from "../utils/CreateTextHtml";
 import { useTranslation } from "react-i18next";
+import { EnterAnimationService } from "../services/enter-animation.service";
 
 const HomeTopScene = () => {
+  const [animateOnEnter, setAnimateOnEnter] = useState(false);
   const [t, i18n] = useTranslation("common");
+
+  useEffect(() => {
+    EnterAnimationService.startAnimationOnEnter(setAnimateOnEnter);
+
+    return () => {
+      EnterAnimationService.clearAnim();
+    };
+  }, []);
 
   return (
     <div className={"top-scene-container"}>
       <h1
+        className={`${animateOnEnter ? "open" : ""}`}
         dangerouslySetInnerHTML={CreateTextHtml(t("home.topSceneHeader"))}
       ></h1>
       <div id={"top-background-container"} className={"top-background"}>
@@ -27,22 +38,27 @@ const HomeTopScene = () => {
             const zIndexValue = Math.floor(
               ((itemWidth * itemHeight) / 625) * 100
             );
+            const itemInitialStyle = {
+              width: 0,
+              height: 0,
+              top: Math.floor(Math.random() * 100) + "vh",
+              left: Math.floor(Math.random() * 100) + "vw",
+              opacity: opacityValue + "%",
+              zIndex: zIndexValue,
+            };
             const itemStyle = {
               width: itemWidth + "vw",
               height: itemHeight + "vh",
-              // paddingTop: Math.floor(Math.random() * 100) + "vh",
-              // paddingLeft: Math.floor(Math.random() * 100) + "vw",
               top: Math.floor(Math.random() * 100) + "vh",
               left: Math.floor(Math.random() * 100) + "vw",
-              // boxShadow: shadowValue,
               opacity: opacityValue + "%",
               zIndex: zIndexValue,
             };
             rows.push(
               <div
                 key={`top-background-element-${i}`}
-                className={"top-background-element"}
-                style={itemStyle}
+                className={`top-background-element`}
+                style={animateOnEnter ? itemStyle : itemInitialStyle}
               ></div>
             );
           }

@@ -42,6 +42,8 @@
     z-index: 1000;
     font-size: 3.5rem;
     text-shadow: 0.3rem 0.3rem 0.3rem $color-shadow-secondary;
+    opacity: 0;
+    transition: all 0.5s ease 0.5s;
 
     span {
       font-family: Volte-Semibold, sans-serif;
@@ -49,6 +51,10 @@
       color: transparent;
       -webkit-text-stroke: 1px $color-font-primary;
       text-shadow: none;
+    }
+
+    &.open {
+      opacity: 1;
     }
   }
 }
@@ -65,7 +71,6 @@
 }
 .top-background-element {
   position: absolute;
-  //background-color: #2bcacd;
   background: radial-gradient(
     ellipse at -10% -10%,
     #eaffff 0%,
@@ -78,6 +83,7 @@
   border-left: 1px solid #ffffff90;
   border-right: 1px solid #00000095;
   border-bottom: 1px solid #00000095;
+  transition: all 0.7s ease;
 }
 
 .home-qualities-container {
@@ -96,7 +102,12 @@
   justify-content: space-around;
   padding-top: $home-qualities-top-padding;
   height: calc(
-    100vh - #{sum($top-navbar-height-desktop, $footer-height, 0.5rem, $home-qualities-top-padding)}
+    100vh - #{sum(
+        $top-navbar-height-desktop,
+        $footer-height,
+        0.5rem,
+        $home-qualities-top-padding
+      )}
   );
   max-height: 100vh;
   min-height: 15rem;
@@ -137,12 +148,12 @@
       font-size: 1.5rem;
       position: relative;
 
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         width: 100%;
         position: absolute;
         right: 0;
-        top: calc( 50% - 1.5px );
+        top: calc(50% - 1.5px);
         border-bottom: 3px solid $color-font-secondary;
       }
     }

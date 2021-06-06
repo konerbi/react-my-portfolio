@@ -6,7 +6,7 @@
     "contact": "Contact"
   },
   "home": {
-    "topSceneHeader": "I don't believe<br>in <span>empty</span> slogans<br>so won't be any inhere<br>&ndash; only specifics",
+    "topSceneHeader": "I don't believe<br>in <span>empty</span> slogans<br>so won't be any inhere<br>&ndash; only the specifics",
     "qualities": {
       "experience": "years<br>experience",
       "solid": "S.O.L.I.D.",
@@ -22,7 +22,10 @@
       "header": "technologies & tools"
     }
   },
-  "aboutMe": {},
+  "about": {
+    "header": "Hi!",
+    "text": "<p>My name is Konrad, I live in the beautiful city of Gdansk, Poland. I'm a front-end developer.</p><p>Why did I choose the front? Going back to my first fascinations with the digital universe, I was always interested in the combination of technology and art. The front-end development allows me to combine both of these aspects through programming and working with graphics.</p><p>Apart from my professional interests, I have several other hobbies. Overall, I love creating SOMETHING out of nothing. Plastic kit modelling, jewellery making, and drawing with pencils, crayons, and ink, are my favourite ways to express myself. Besides, I enjoy playing the guitar, fishing with a rod and travelling.</p><p>If you want to know some more &ndash; please check out my <a href='src/assets/documents/KonradErbetowski_CV.pdf' download=\"KonradErbetowski_CV.pdf\"><b>CV</b></a>.</p>"
+  },
   "portfolio": {},
   "portfolioItem": {
     "commercialText": "Commercial project in collaboration with <a href='{{collaborateCompanyUrl}}' target='_blank'>{{collaborateCompany}}</a>",
@@ -56,12 +59,12 @@
   },
   "contact": {
     "header": "Konrad Erbetowski",
-    "address": "80-180 Gdańsk, Poland",
+    "address": "80-180 Gdansk, Poland",
     "email": "konrad.erbetowski@wp.pl"
   },
   "buttons": {},
   "footer": {
-    "address": "80-180 Gdańsk, Poland",
+    "address": "80-180 Gdansk, Poland",
     "copyrights": "©{{currentYear}} KONER Software Solutions"
   },
   "cookies": {
