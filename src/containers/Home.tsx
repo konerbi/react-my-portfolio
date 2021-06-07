@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import HomeTopScene from "../components/HomeTopScene";
 import HomeQualities from "../components/HomeQualities";
+import HomeTechnologies from "../components/HomeTechnologies";
 
 const Home = () => {
   const [isQualityItemOutsideViewport, setIsQualityItemOutsideViewport] =
+    useState(true);
+  const [isTechnologyItemOutsideViewport, setIsTechnologyItemOutsideViewport] =
     useState(true);
 
   const handleScroll = () => {
@@ -13,9 +16,9 @@ const Home = () => {
       setIsQualityItemOutsideViewport(false);
     }
 
-    // if (position > 1200) {
-    //   setIsWhyUsOutsideViewport(false);
-    // }
+    if (position && position > 1200) {
+      setIsTechnologyItemOutsideViewport(false);
+    }
     // if (position > 3000) {
     //   setIsJobOutsideViewport(false);
     // }
@@ -35,6 +38,9 @@ const Home = () => {
         <HomeTopScene />
         <HomeQualities
           isQualityItemOutsideViewport={isQualityItemOutsideViewport}
+        />
+        <HomeTechnologies
+          isTechnologyItemOutsideViewport={isTechnologyItemOutsideViewport}
         />
       </div>
     </div>
