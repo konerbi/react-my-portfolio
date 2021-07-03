@@ -1,11 +1,9 @@
 function ScrollToElement(scrolledElement: string, elementId: string) {
   if (elementId) {
-    const scrollToDiv =
-      document.getElementById(elementId)!.offsetTop -
-      document.getElementById("navbar")!.offsetHeight;
+    const scrollToDivY = document.getElementById(elementId)!.offsetTop - 80;
     document
       .getElementById(scrolledElement)!
-      .scrollTo({ top: scrollToDiv, behavior: "smooth" });
+      .scrollTo({ top: scrollToDivY, behavior: "smooth" });
   }
 }
 

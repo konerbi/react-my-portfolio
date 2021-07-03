@@ -11,7 +11,6 @@ const Home = () => {
 
   const handleScroll = () => {
     const position = document.getElementById("home-main-container")?.scrollTop;
-    console.log("position=" + position);
     if (position && position > 200) {
       setIsQualityItemOutsideViewport(false);
     }

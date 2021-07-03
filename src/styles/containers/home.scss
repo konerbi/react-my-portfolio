@@ -193,6 +193,7 @@
   justify-content: center;
   width: 100vw;
   z-index: 1500;
+  padding-bottom: 4rem;
 }
 .technologies-box {
   width: 100%;
@@ -300,6 +301,9 @@
   }
   .home-qualities-container {
     height: unset;
+    .button-scroll {
+      display: none;
+    }
   }
   .qualities-box {
     height: auto;
