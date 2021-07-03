@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import ScrollToElement from "../utils/ScrollToElement";
 
 interface HomeTechnologiesProps {
   isTechnologyItemOutsideViewport: boolean;
@@ -60,7 +61,10 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
   }
 
   return (
-    <div className={"home-technologies-container"}>
+    <div
+      className={"home-technologies-container"}
+      id={"home-technologies-container"}
+    >
       <div className={"technologies-box"}>
         <h1>{t("home.technologies.header")}</h1>
         <div className={"technologies-items"}>
@@ -196,6 +200,12 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
           })}
         </div>
       </div>
+      <button
+        className={"button-scroll up inverse"}
+        onClick={() =>
+          ScrollToElement("home-main-container", "top-scene-container")
+        }
+      ></button>
     </div>
   );
 };

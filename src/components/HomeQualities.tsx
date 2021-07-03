@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import CreateTextHtml from "../utils/CreateTextHtml";
+import ScrollToElement from "../utils/ScrollToElement";
 
 interface HomeQualitiesProps {
   isQualityItemOutsideViewport: boolean;
@@ -104,6 +105,12 @@ const HomeQualities = (props: HomeQualitiesProps) => {
           );
         })}
       </div>
+      <button
+        className={"button-scroll down inverse"}
+        onClick={() =>
+          ScrollToElement("home-main-container", "home-technologies-container")
+        }
+      ></button>
     </div>
   );
 };

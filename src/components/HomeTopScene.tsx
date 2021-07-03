@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CreateTextHtml from "../utils/CreateTextHtml";
 import { useTranslation } from "react-i18next";
 import { EnterAnimationService } from "../services/enter-animation.service";
+import ScrollToElement from "../utils/ScrollToElement";
 
 const HomeTopScene = () => {
   const [animateOnEnter, setAnimateOnEnter] = useState(false);
@@ -16,7 +17,7 @@ const HomeTopScene = () => {
   }, []);
 
   return (
-    <div className={"top-scene-container"}>
+    <div className={"top-scene-container"} id={"top-scene-container"}>
       <h1
         className={`${animateOnEnter ? "open" : ""}`}
         dangerouslySetInnerHTML={CreateTextHtml(t("home.topSceneHeader"))}
@@ -65,6 +66,12 @@ const HomeTopScene = () => {
           return rows;
         })()}
       </div>
+      <button
+        className={"button-scroll down"}
+        onClick={() =>
+          ScrollToElement("home-main-container", "home-qualities-container")
+        }
+      ></button>
     </div>
   );
 };

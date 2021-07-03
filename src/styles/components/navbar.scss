@@ -21,7 +21,7 @@
   box-shadow: 0 0 2rem $color-shadow;
   background-color: $color-background-nav-footer;
   margin-top: -5rem;
-  z-index: 2000;
+  z-index: 3000;
 
   &.inverted {
     .logo path {
