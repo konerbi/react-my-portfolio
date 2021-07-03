@@ -31,7 +31,8 @@
     "start": "webpack serve --mode development --hot --history-api-fallback --config webpack.config.js",
     "build": "webpack --mode production",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.ts src/**/*.tsx"
   },
   "eslintConfig": {
     "extends": [
@@ -54,7 +55,11 @@
   "devDependencies": {
     "@types/react-lazyload": "^3.1.0",
     "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
     "css-loader": "^5.2.4",
+    "eslint": "^7.30.0",
+    "eslint-plugin-react": "^7.24.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "image-webpack-loader": "^7.0.1",

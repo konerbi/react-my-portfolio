@@ -31,8 +31,8 @@ const HomeTopScene = () => {
             const itemWidth = randomForWidth === 0 ? 5 : randomForWidth;
             const itemHeight = randomForHeight === 0 ? 5 : randomForHeight;
 
-            let shadow = "box-shadow";
-            const shadowValue: string = `2rem 2rem 2rem #00000090`;
+            const shadow = "box-shadow";
+            const shadowValue = `2rem 2rem 2rem #00000090`;
             const opacityValue = Math.floor(
               ((itemWidth * itemHeight) / 625) * 100
             );

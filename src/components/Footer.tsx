@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {EnterAnimationService} from '../services/enter-animation.service';
+import { EnterAnimationService } from "../services/enter-animation.service";
 
 const Footer = () => {
   const [t, i18n] = useTranslation("common");
@@ -24,7 +24,7 @@ const Footer = () => {
   useEffect(() => {
     EnterAnimationService.startAnimationOnEnter(setAnimateOnEnter);
 
-    let currentDate = new Date();
+    const currentDate = new Date();
     setCurrentYear(currentDate.getFullYear());
 
     return () => {
@@ -38,8 +38,17 @@ const Footer = () => {
         <div className={`social-media`}>
           {socialItems.map((value, index) => {
             return (
-              <div key={"socialItem-" + index} className={`footer-icon-container`}>
-                <a className={`footer-icon`} href={value.href} title={value.title} target="_blank">
+              <div
+                key={"socialItem-" + index}
+                className={`footer-icon-container`}
+              >
+                <a
+                  className={`footer-icon`}
+                  href={value.href}
+                  title={value.title}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon icon={["fab", value.icon]} />
                 </a>
               </div>

@@ -1,8 +1,4 @@
-function ScrollToElement(
-  scrolledElement: string,
-  elementId: string,
-  shouldBeExecuted = true
-) {
+function ScrollToElement(scrolledElement: string, elementId: string) {
   if (elementId) {
     const scrollToDiv =
       document.getElementById(elementId)!.offsetTop -

@@ -69,8 +69,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
         <h1>{t("home.technologies.header")}</h1>
         <div className={"technologies-items"}>
           {technologiesHard.map((item, index) => {
-            let itemStyle = getItemStyle(item);
-            let imgStyle = getImgStyle(item);
+            const itemStyle = getItemStyle(item);
+            const imgStyle = getImgStyle(item);
             return (
               <div
                 key={"technology-item-" + index}
@@ -91,8 +91,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
         </div>
         <div className={"technologies-items"}>
           {libraries.map((item, index) => {
-            let itemStyle = getItemStyle(item);
-            let imgStyle = getImgStyle(item);
+            const itemStyle = getItemStyle(item);
+            const imgStyle = getImgStyle(item);
             return (
               <div
                 key={"library-item-" + index}
@@ -113,8 +113,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
         </div>
         <div className={"technologies-items"}>
           {technologiesSoft.map((item, index) => {
-            let itemStyle = getItemStyle(item);
-            let imgStyle = getImgStyle(item);
+            const itemStyle = getItemStyle(item);
+            const imgStyle = getImgStyle(item);
             return (
               <div
                 key={"technology-soft-item-" + index}
@@ -135,8 +135,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
         </div>
         <div className={"technologies-items"}>
           {tests.map((item, index) => {
-            let itemStyle = getItemStyle(item);
-            let imgStyle = getImgStyle(item);
+            const itemStyle = getItemStyle(item);
+            const imgStyle = getImgStyle(item);
             return (
               <div
                 key={"test-item-" + index}
@@ -157,8 +157,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
         </div>
         <div className={"technologies-items"}>
           {toolsHard.map((item, index) => {
-            let itemStyle = getItemStyle(item);
-            let imgStyle = getImgStyle(item);
+            const itemStyle = getItemStyle(item);
+            const imgStyle = getImgStyle(item);
             return (
               <div
                 key={"tool-hard-item-" + index}
@@ -179,8 +179,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
         </div>
         <div className={"technologies-items"}>
           {tools.map((item, index) => {
-            let itemStyle = getItemStyle(item);
-            let imgStyle = getImgStyle(item);
+            const itemStyle = getItemStyle(item);
+            const imgStyle = getImgStyle(item);
             return (
               <div
                 key={"tool-item-" + index}
