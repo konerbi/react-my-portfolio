@@ -3,7 +3,8 @@
     "home": "Home",
     "aboutMe": "About me",
     "portfolio": "Portfolio",
-    "contact": "Contact"
+    "contact": "Contact",
+    "languageToggle": "Switch into Polish"
   },
   "home": {
     "topSceneHeader": "I don't believe<br>in <span>empty</span> slogans<br>so won't be any inhere<br>&ndash; only the specifics",

@@ -34,8 +34,7 @@ const LanguageToggle = ({ onChangedLanguage }: any) => {
 
   return (
     <div className="language">
-      <a
-        title=""
+      <a title={t('navbar.languageToggle')}
         className="link link-language"
         onMouseEnter={() => handleToggle()}
       >
@@ -46,7 +45,7 @@ const LanguageToggle = ({ onChangedLanguage }: any) => {
         onMouseLeave={() => handleToggle(false)}
       >
         <li onClick={() => handleLanguage(alternateLanguage)}>
-          <a rel="alternate" title="">
+          <a rel="alternate" title={t('navbar.languageToggle')}>
             {alternateLanguage}
           </a>
         </li>

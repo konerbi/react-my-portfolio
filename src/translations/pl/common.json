@@ -3,7 +3,8 @@
     "home": "Główna",
     "aboutMe": "O mnie",
     "portfolio": "Portfolio",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "languageToggle": "Angielski"
   },
   "home": {
     "topSceneHeader": "Nie wierzę<br><span>pustym</span> sloganom,<br>więc takich tu nie będzie<br>&ndash; tylko konkrety",
