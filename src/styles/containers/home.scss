@@ -293,21 +293,31 @@
 
 
 @media screen and (max-width: 1024px) {
+  .button-scroll {
+    bottom: 4rem;
+  }
+
   .top-scene-container {
     h1 {
       text-align: center;
       font-size: 3rem;
     }
   }
+
   .home-qualities-container {
     height: unset;
     .button-scroll {
       display: none;
     }
   }
+
   .qualities-box {
     height: auto;
     max-height: unset;
     padding: 4rem 5rem 0;
+  }
+
+  .home-technologies-container {
+    padding-bottom: 5rem;
   }
 }
