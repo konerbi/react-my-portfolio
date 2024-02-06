@@ -33,7 +33,7 @@ const Portfolio = () => {
       commercial: true,
       collaborateCompany: "Speednet Sp. z o.o.",
       collaborateCompanyUrl: "https://speednet.pl/",
-      referenceUrl: "https://speednet.pl/projekty/pzu-cash-en/",
+      referenceUrl: "https://www.portalcash.pl/",
       images: ["pzu_lp_0.png", "pzu_lp_1.png", "pzu_lp_2.png", "pzu_lp_3.png"],
     },
     {
@@ -47,7 +47,7 @@ const Portfolio = () => {
       commercial: true,
       collaborateCompany: "Speednet Sp. z o.o.",
       collaborateCompanyUrl: "https://speednet.pl/",
-      referenceUrl: "https://speednet.pl/en/projekty/saar-landesbank-en/",
+      referenceUrl: "https://speednet.pl/portfolio-post/saar-digital-transformation/",
       images: [
         "saar_0.png",
         "saar_1.png",
@@ -69,8 +69,8 @@ const Portfolio = () => {
       commercial: true,
       collaborateCompany: "Speednet Sp. z o.o.",
       collaborateCompanyUrl: "https://speednet.pl/",
-      referenceUrl:
-        "https://www.buildingblocksofscience.com/ion-bbs3d-at-home-learning-114JL-45147J.html",
+      referenceUrl: "https://speednet.pl/portfolio-post/cbs-operational-e-learning-platform/",
+        // "https://www.buildingblocksofscience.com/ion-bbs3d-at-home-learning-114JL-45147J.html",
       images: ["bbs3d_0.png", "bbs3d_1.png", "bbs3d_2.png"],
     },
     {

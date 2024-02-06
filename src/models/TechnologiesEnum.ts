@@ -1,6 +1,7 @@
 export enum TechnologiesEnum {
   angular = "angular",
   react = "react",
+  nextjs = "nextjs",
   html5 = "html5",
   js = "js-square",
   css = "css3-alt",

@@ -73,9 +73,8 @@ const Navbar = () => {
                 <li key={"menu-item-" + index} className="item">
                   <NavLink
                     to={value.path}
-                    activeClassName="navbar-element-active"
                     title={t(value.title)}
-                    className="link"
+                    className={navData => navData.isActive ? "link navbar-element-active" : "link"}
                     onClick={() => handleMenuItemClick()}
                   >
                     {t(value.title)}

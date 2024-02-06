@@ -10,40 +10,41 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
   const [t, i18n] = useTranslation("common");
 
   const technologiesHard = [
-    { src: "angular.svg", ratioX: 1, ratioY: 1 },
-    { src: "ts.svg", ratioX: 0.8, ratioY: 0.8 },
-    { src: "react.svg", ratioX: 1, ratioY: 1 },
-    { src: "js.svg", ratioX: 0.8, ratioY: 0.8 },
+    { src: "angular.svg", ratioX: 1, ratioY: 1, label: "Angular" },
+    { src: "ts.svg", ratioX: 0.8, ratioY: 0.8, label: "TypeScrip" },
+    { src: "react.svg", ratioX: 1, ratioY: 1, label: "React" },
+    { src: "nextjs.svg", ratioX: 0.5, ratioY: 0.5, label: "Next.js" },
+    { src: "js.svg", ratioX: 0.8, ratioY: 0.8, label: "JavaScript" },
   ];
   const libraries = [
-    { src: "rxjs.svg", ratioX: 1, ratioY: 1 },
-    { src: "ngrx.svg", ratioX: 1, ratioY: 1 },
-    { src: "redux.svg", ratioX: 0.8, ratioY: 0.8 },
-    { src: "redux-saga.svg", ratioX: 0.8, ratioY: 0.8 },
+    { src: "rxjs.svg", ratioX: 1, ratioY: 1, label: "RxJS" },
+    { src: "ngrx.svg", ratioX: 1, ratioY: 1, label: "NgRx" },
+    { src: "redux.svg", ratioX: 0.8, ratioY: 0.8, label: "Redux" },
+    { src: "redux-saga.svg", ratioX: 0.8, ratioY: 0.8, label: "Redux Saga" },
   ];
   const technologiesSoft = [
-    { src: "html5.svg", ratioX: 1, ratioY: 1 },
-    { src: "css3.svg", ratioX: 1, ratioY: 1 },
-    { src: "sass.svg", ratioX: 1.2, ratioY: 1 },
-    { src: "less.svg", ratioX: 1.2, ratioY: 1 },
-    { src: "bootstrap.svg", ratioX: 0.8, ratioY: 0.8 },
-    { src: "material-ui.svg", ratioX: 0.8, ratioY: 0.8 },
+    { src: "html5.svg", ratioX: 1, ratioY: 1, label: "HTML5" },
+    { src: "css3.svg", ratioX: 1, ratioY: 1, label: "CSS3" },
+    { src: "sass.svg", ratioX: 1.2, ratioY: 1, label: "Sass" },
+    { src: "less.svg", ratioX: 1.2, ratioY: 1, label: "Less" },
+    { src: "bootstrap.svg", ratioX: 0.8, ratioY: 0.8, label: "Bootstrap" },
+    { src: "material-ui.svg", ratioX: 0.8, ratioY: 0.8, label: "MaterialUI" },
   ];
   const tests = [
-    { src: "jasmine.svg", ratioX: 2, ratioY: 1 },
-    { src: "jest.svg", ratioX: 1, ratioY: 1 },
+    { src: "jasmine.svg", ratioX: 2, ratioY: 1, label: "Jasmine" },
+    { src: "jest.svg", ratioX: 1, ratioY: 1, label: "Jest" },
   ];
   const toolsHard = [
-    { src: "npm.svg", ratioX: 1.2, ratioY: 1 },
-    { src: "webpack.svg", ratioX: 1, ratioY: 1 },
-    { src: "jenkins.svg", ratioX: 1, ratioY: 2 },
-    { src: "git.svg", ratioX: 1.2, ratioY: 1 },
-    { src: "gulp.svg", ratioX: 1, ratioY: 1 },
-    { src: "webstorm.svg", ratioX: 1, ratioY: 1 },
+    { src: "npm.svg", ratioX: 1.2, ratioY: 1, label: "npm" },
+    { src: "webpack.svg", ratioX: 1, ratioY: 1, label: "Webpack" },
+    { src: "jenkins.svg", ratioX: 1, ratioY: 2, label: "Jenkins" },
+    { src: "git.svg", ratioX: 1.2, ratioY: 1, label: "Git" },
+    { src: "gulp.svg", ratioX: 1, ratioY: 1, label: "Gulp" },
+    { src: "webstorm.svg", ratioX: 1, ratioY: 1, label: "WebstormIDE" },
   ];
   const tools = [
-    { src: "jira.svg", ratioX: 0.8, ratioY: 0.8 },
-    { src: "confluence.svg", ratioX: 2, ratioY: 1 },
+    { src: "jira.svg", ratioX: 0.8, ratioY: 0.8, label: "Jira" },
+    { src: "confluence.svg", ratioX: 2, ratioY: 1, label: "Confluence" },
   ];
 
   function getItemStyle(item: any) {
@@ -78,6 +79,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
                   props.isTechnologyItemOutsideViewport ? "hide-onload" : ""
                 }`}
                 style={itemStyle}
+                aria-label={item.label}
+                title={item.label}
               >
                 <div className={"technology-icon"}>
                   <img
@@ -100,6 +103,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
                   props.isTechnologyItemOutsideViewport ? "hide-onload" : ""
                 }`}
                 style={itemStyle}
+                aria-label={item.label}
+                title={item.label}
               >
                 <div className={"technology-icon"}>
                   <img
@@ -122,6 +127,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
                   props.isTechnologyItemOutsideViewport ? "hide-onload" : ""
                 }`}
                 style={itemStyle}
+                aria-label={item.label}
+                title={item.label}
               >
                 <div className={"technology-icon"}>
                   <img
@@ -144,6 +151,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
                   props.isTechnologyItemOutsideViewport ? "hide-onload" : ""
                 }`}
                 style={itemStyle}
+                aria-label={item.label}
+                title={item.label}
               >
                 <div className={"technology-icon"}>
                   <img
@@ -166,6 +175,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
                   props.isTechnologyItemOutsideViewport ? "hide-onload" : ""
                 }`}
                 style={itemStyle}
+                aria-label={item.label}
+                title={item.label}
               >
                 <div className={"technology-icon"}>
                   <img
@@ -188,6 +199,8 @@ const HomeTechnologies = (props: HomeTechnologiesProps) => {
                   props.isTechnologyItemOutsideViewport ? "hide-onload" : ""
                 }`}
                 style={itemStyle}
+                aria-label={item.label}
+                title={item.label}
               >
                 <div className={"technology-icon"}>
                   <img
