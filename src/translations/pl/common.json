@@ -56,6 +56,10 @@
       "pzu": {
         "title": "PZU Cash",
         "description": "System internetowy do przydzielania kredytów gotówkowych pracownikom. Możliwość generowania pożyczek w czasie rzeczywistym:<br>&bull; landing page z kalkulatorem kredytowym (HTML/JS)<br>&bull; system do procesowania wniosku (Angular/RxJS/NgRx)<br>&bull; panel klienta (Angular/RxJS)<br>&bull; backoffice (Angular/RxJS)"
+      },
+      "bancovo": {
+        "title": "BANCOVO",
+        "description": "Platforma fintech umożliwiająca użytkownikom wybór spośród ponad 25 instytucji finansowych, bankowych i pozabankowych."
       }
     }
   },

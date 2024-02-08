@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ScrollToElement from "../utils/ScrollToElement";
+import ScrollElementToContent from "../utils/ScrollElement";
 import TSlogo from "../components/TSlogo";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
@@ -26,6 +28,12 @@ const PortfolioItem = (props: PortfolioItemProps) => {
 
   function handleToggleInfo() {
     setIsDescriptionVisible(!isDescriptionVisible);
+
+    if(!isDescriptionVisible) {
+        ScrollElementToContent("portfolio-container", `description-container-${props.id}`);
+    }else {
+        ScrollToElement("portfolio-container", `portfolio-item-container-${props.id}`);
+    }
   }
 
   function handleLinkButton(url: string | undefined) {
@@ -37,7 +45,7 @@ const PortfolioItem = (props: PortfolioItemProps) => {
   }
 
   return (
-    <div className={"portfolio-item-container"}>
+    <div id={`portfolio-item-container-${props.id}`} className={"portfolio-item-container"}>
       <div className={"project-view-container"}>
         <div className={"image-container"}>
           <div
@@ -138,7 +146,7 @@ const PortfolioItem = (props: PortfolioItemProps) => {
           isDescriptionVisible ? "show" : "hide"
         }`}
       >
-        <p
+        <p id={`description-container-${props.id}`}
           dangerouslySetInnerHTML={CreateTextHtml(
             t(`portfolioItem.projects.${props.id}.description`)
           )}

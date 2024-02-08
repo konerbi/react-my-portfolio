@@ -26,7 +26,7 @@
   },
   "about": {
     "header": "Hi!",
-    "text": "<p>My name is Konrad, I live in the beautiful city of Gdansk, Poland. I'm a front-end developer.</p><p>Why did I choose the front? Going back to my first fascinations with the digital universe, I was always interested in the combination of technology and art. The front-end development allows me to combine both of these aspects through programming and working with graphics.</p><p>Apart from my professional interests, I have several other hobbies. Overall, I love creating SOMETHING out of nothing. Plastic kit modelling, jewellery making, and drawing with pencils, crayons, and ink, are my favourite ways to express myself. Besides, I enjoy playing the guitar, fishing with a rod and travelling.</p><p>If you want to know some more &ndash; please check out my <a href='src/assets/documents/KonradErbetowski_CV.pdf' download=\"KonradErbetowski_CV.pdf\"><b>CV</b></a>.</p>"
+    "text": "<p>My name is Konrad, I live in the beautiful city of Gdansk, Poland. I'm a front-end developer.</p><p>Why did I choose the front? Going back to my first fascinations with the digital universe, I was always interested in the combination of technology and art. The front-end development allows me to combine both of these aspects through programming and working with graphics.</p><p>Apart from my professional interests, I have several other hobbies. Overall, I love creating SOMETHING out of nothing. Plastic kit modelling, jewellery making, and drawing with pencils, crayons, and ink, are my favourite ways to express myself. Besides, I enjoy playing the guitar, rod fishing and travelling.</p><p>If you want to know more &ndash; please check out my <a href='src/assets/documents/KonradErbetowski_CV.pdf' download=\"KonradErbetowski_CV.pdf\"><b>CV</b></a>.</p>"
   },
   "portfolio": {},
   "portfolioItem": {
@@ -56,6 +56,10 @@
       "pzu": {
         "title": "PZU Cash",
         "description": "Internet system for allocating cash loans to employees from the social fund with the possibility of generating loans in real-time:<br>&bull; landing page with a loan calculator (HTML/JS)<br>&bull; system for processing the application (Angular/RxJS/NgRx)<br>&bull; customer panel (Angular/RxJS)<br>&bull; backoffice (Angular/RxJS)"
+      },
+      "bancovo": {
+        "title": "BANCOVO",
+        "description": "A fintech platform enabling users to choose among more than 25 financial, banking and non-banking institutions."
       }
     }
   },

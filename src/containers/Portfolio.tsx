@@ -37,6 +37,23 @@ const Portfolio = () => {
       images: ["pzu_lp_0.png", "pzu_lp_1.png", "pzu_lp_2.png", "pzu_lp_3.png"],
     },
     {
+      id: "bancovo",
+      technologies: [
+        TechnologiesEnum.angular,
+        TechnologiesEnum.ts,
+        TechnologiesEnum.sass,
+        TechnologiesEnum.html5,
+        TechnologiesEnum.js,
+        TechnologiesEnum.php,
+        TechnologiesEnum.css,
+      ],
+      commercial: true,
+      collaborateCompany: "Speednet Sp. z o.o.",
+      collaborateCompanyUrl: "https://speednet.pl/",
+      referenceUrl: "https://speednet.pl/portfolio-post/bancovo-creation-of-an-innovative-fintech-platform/",
+      images: ["bancovo_0.png"],
+    },
+    {
       id: "saar",
       technologies: [
         TechnologiesEnum.angular,
@@ -73,24 +90,24 @@ const Portfolio = () => {
         // "https://www.buildingblocksofscience.com/ion-bbs3d-at-home-learning-114JL-45147J.html",
       images: ["bbs3d_0.png", "bbs3d_1.png", "bbs3d_2.png"],
     },
-    {
-      id: "crypto-news",
-      technologies: [
-        TechnologiesEnum.react,
-        TechnologiesEnum.ts,
-        TechnologiesEnum.sass,
-      ],
-      sourceCodeUrl: "https://github.com/konerbi/react-crypto-news",
-    },
-    {
-      id: "speednet-site",
-      technologies: [
-        TechnologiesEnum.react,
-        TechnologiesEnum.js,
-        TechnologiesEnum.sass,
-      ],
-      sourceCodeUrl: "https://github.com/konerbi/react-speednet-site-project",
-    },
+    // {
+    //   id: "crypto-news",
+    //   technologies: [
+    //     TechnologiesEnum.react,
+    //     TechnologiesEnum.ts,
+    //     TechnologiesEnum.sass,
+    //   ],
+    //   sourceCodeUrl: "https://github.com/konerbi/react-crypto-news",
+    // },
+    // {
+    //   id: "speednet-site",
+    //   technologies: [
+    //     TechnologiesEnum.react,
+    //     TechnologiesEnum.js,
+    //     TechnologiesEnum.sass,
+    //   ],
+    //   sourceCodeUrl: "https://github.com/konerbi/react-speednet-site-project",
+    // },
   ];
 
   useEffect(() => {
@@ -102,7 +119,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className={`portfolio-container`}>
+    <div id="portfolio-container" className={`portfolio-container`}>
       <div className={`portfolio-wrapper ${animateOnEnter ? "open" : ""}`}>
         {projects.map((project: Project, index: number) => {
           return (
