@@ -1,25 +1,33 @@
-import React from "react";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import Home from './Home';
-import Navbar from '../components/Navbar';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from '../components/Footer';
-import Contact from './Contact';
-import Portfolio from './Portfolio';
+import Navbar from '../components/Navbar';
+import InitializeGoogleAnalytics, { TrackGoogleAnalyticsPageview } from '../services/GA';
 import About from './About';
+import Contact from './Contact';
+import Home from './Home';
+import Portfolio from './Portfolio';
 
-const AppRouter = () => (
-  <BrowserRouter>
-    <>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about-me" element={<About/>} />
-        <Route path="/portfolio" element={<Portfolio/>} />
-        <Route path="/contact" element={<Contact/>} />
-      </Routes>
-      <Footer />
-    </>
-  </BrowserRouter>
-);
+InitializeGoogleAnalytics();
+const AppRouter = () => {
+  useEffect(() => {
+    TrackGoogleAnalyticsPageview(window.location.pathname + window.location.search);
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-me" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </>
+    </BrowserRouter>
+  );
+};
 
 export default AppRouter;
