@@ -1,3 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
+# START YOAST BLOCK
+# ---------------------------
 User-agent: *
 Disallow:
+
+Sitemap: https://koner.com.pl/sitemap.xml
+# ---------------------------
+# END YOAST BLOCK

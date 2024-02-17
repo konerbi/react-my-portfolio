@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import LanguageToggle from "./LanguageToggle";
-import { useTranslation } from "react-i18next";
-import { EnterAnimationService } from "../services/enter-animation.service";
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { EnterAnimationService } from '../services/enter-animation.service';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
   const location = useLocation();
-  const [t, i18n] = useTranslation("common");
+  const [t, i18n] = useTranslation('common');
   const [isInverted, setIsInverted] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -14,16 +14,16 @@ const Navbar = () => {
 
   const menuItems = [
     {
-      title: "navbar.aboutMe",
-      path: "/about-me",
+      title: 'navbar.aboutMe',
+      path: '/about-me',
     },
     {
-      title: "navbar.portfolio",
-      path: "/portfolio",
+      title: 'navbar.portfolio',
+      path: '/portfolio',
     },
     {
-      title: "navbar.contact",
-      path: "/contact",
+      title: 'navbar.contact',
+      path: '/contact',
     },
   ];
 
@@ -37,7 +37,7 @@ const Navbar = () => {
 
   function toggleMobileMenu() {
     setIsMobileMenuOpened(!isMobileMenuOpened);
-    document.body.style.overflow = !isMobileMenuOpened ? "hidden" : "auto";
+    document.body.style.overflow = !isMobileMenuOpened ? 'hidden' : 'auto';
   }
 
   function handleMenuItemClick() {
@@ -48,9 +48,9 @@ const Navbar = () => {
 
   return (
     <div
-      className={`navigation ${isInverted ? "inverted" : ""} ${
-        isMobileMenuOpened ? "opened" : ""
-      } ${animateOnEnter ? "open" : ""}`}
+      className={`navigation ${isInverted ? 'inverted' : ''} ${
+        isMobileMenuOpened ? 'opened' : ''
+      } ${animateOnEnter ? 'open' : ''}`}
       id="navbar"
     >
       <div className="navbar">
@@ -60,21 +60,20 @@ const Navbar = () => {
           title="KONER Software Solutions"
           onClick={() => handleMenuItemClick()}
         >
-          <img src={"src/assets/images/logo.svg"} />
+          <img alt="KONER Software Solution logo" src={'src/assets/images/logo.svg'} />
         </Link>
 
-        <div
-          id="main-menu"
-          className={`main-menu ${isMobileMenuOpened ? "opened" : ""}`}
-        >
+        <div id="main-menu" className={`main-menu ${isMobileMenuOpened ? 'opened' : ''}`}>
           <ul className="menu ">
             {menuItems.map((value, index) => {
               return (
-                <li key={"menu-item-" + index} className="item">
+                <li key={'menu-item-' + index} className="item">
                   <NavLink
                     to={value.path}
                     title={t(value.title)}
-                    className={navData => navData.isActive ? "link navbar-element-active" : "link"}
+                    className={navData =>
+                      navData.isActive ? 'link navbar-element-active' : 'link'
+                    }
                     onClick={() => handleMenuItemClick()}
                   >
                     {t(value.title)}
@@ -88,17 +87,14 @@ const Navbar = () => {
           </ul>
           <div
             id="btn-menu-toggle"
-            className={`btn-menu-toggle ${isMobileMenuOpened ? "opened" : ""}`}
+            className={`btn-menu-toggle ${isMobileMenuOpened ? 'opened' : ''}`}
             onClick={() => toggleMobileMenu()}
           >
             <span />
           </div>
         </div>
       </div>
-      <div
-        id="overlay"
-        className={`overlay ${isMobileMenuOpened ? "show" : ""}`}
-      />
+      <div id="overlay" className={`overlay ${isMobileMenuOpened ? 'show' : ''}`} />
     </div>
   );
 };
